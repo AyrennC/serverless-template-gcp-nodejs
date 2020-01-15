@@ -2,7 +2,7 @@
 
 This is a template for kick-starting a Nodejs + Typescript project for Google Cloud Function. a bitbucket pipeline is included for CI/CD.
 
-## <a name="quick-start"></a>Quick Start
+## Quick Start
 
 1. **Install serverless via npm:**
 
@@ -19,7 +19,7 @@ serverless create --template-url https://github.com/CarneyC/serverless-template-
 cd my-service
 ```
 
-## <a name="bitbucket-configuration"></a>Bitbucket Configuration
+## Bitbucket Configuration
 
 The bucket pipeline requires the following variables for **BOTH** **Test** and **Production** deployment environments.
 
