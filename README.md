@@ -6,18 +6,18 @@ This is a template for kick-starting a Nodejs + Typescript project for Google Cl
 
 1. **Install serverless via npm:**
 
-```bash
-npm install -g serverless
-```
+    ```bash
+    npm install -g serverless
+    ```
 
 2. **Create a Service using the template:**
 
-```bash
-# Create a new Serverless Service/Project
-serverless create --template-url https://github.com/CarneyC/serverless-template-gcp-nodejs --path my-service
-# Change into the newly created directory
-cd my-service
-```
+    ```bash
+    # Create a new Serverless Service/Project
+    serverless create --template-url https://github.com/CarneyC/serverless-template-gcp-nodejs --path my-service
+    # Change into the newly created directory
+    cd my-service
+    ```
 
 ## Bitbucket Configuration
 
