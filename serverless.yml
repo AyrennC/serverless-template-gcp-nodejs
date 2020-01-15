@@ -1,0 +1,24 @@
+service: file-api-create-folder
+
+provider:
+  name: google
+  stage: ${env:SLS_STAGE}
+  runtime: nodejs8
+  region: ${env:GCP_REGION}
+  project: ${env:GCP_PROJECT}
+  # the path to the credentials file needs to be absolute
+  credentials: keyfile.json
+
+plugins:
+  - serverless-webpack
+  - serverless-google-cloudfunctions
+
+functions:
+  create_folder:
+    handler: create_folder
+    events:
+      - http: http
+
+custom:
+  webpack:
+    includeModules: false

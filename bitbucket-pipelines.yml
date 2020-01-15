@@ -1,0 +1,34 @@
+image: node:10.15.3
+
+definitions:
+  steps:
+    - step: &deploy
+        name: Deploy to Test
+        caches:
+          - node
+        deployment: test
+        script:
+          - pipe: atlassian/serverless-deploy:0.1.2
+            variables:
+              GCP_KEY_FILE: $GCP_KEY_FILE
+              GCP_REGION: $GCP_REGION
+              GCP_PROJECT: $GCP_PROJECT
+              SLS_STAGE: $SLS_STAGE
+
+pipelines:
+  default:
+    - step:
+        name: Build and test
+        caches:
+          - node
+        script:
+          - npm install
+          - npm test
+    - step:
+        <<: *deploy
+    - step:
+        <<: *deploy
+        name: Deploy to Production
+        deployment: production
+        trigger: manual
+
