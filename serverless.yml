@@ -1,4 +1,4 @@
-service: file-api-create-folder
+service: serverless-template-gcp-nodejs
 
 provider:
   name: google
@@ -14,8 +14,8 @@ plugins:
   - serverless-google-cloudfunctions
 
 functions:
-  create_folder:
-    handler: create_folder
+  hello_world:
+    handler: hello_world
     events:
       - http: http
 
