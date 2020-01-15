@@ -31,6 +31,7 @@ node_modules
 
 # IDE
 **/.idea
+**/.vs
 
 # OS
 .DS_Store
