@@ -3,7 +3,7 @@ import { hello } from '../Functions/hello';
 
 export type HelloHandler = () => RequestHandler;
 
-const createHelloHandler: HelloHandler = () => {
+const makeHelloHandler: HelloHandler = () => {
   return async (request: Request, response: Response): Promise<void> => {
     if (request.body && request.body.name) {
       const message = hello(request.body.name);
@@ -14,4 +14,4 @@ const createHelloHandler: HelloHandler = () => {
   };
 };
 
-export default createHelloHandler;
+export default makeHelloHandler;

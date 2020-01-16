@@ -1,3 +1,3 @@
-import createHelloHandler from './Handlers/createHelloHandler';
+import makeHelloHandler from './Handlers/makeHelloHandler';
 
-exports.hello_word = createHelloHandler();
+exports.hello_word = makeHelloHandler();
