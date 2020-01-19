@@ -33,6 +33,7 @@
     "eslint-loader": "^3.0.3",
     "eslint-plugin-mocha": "^6.2.2",
     "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-security": "^1.4.0",
     "fast-check": "^1.21.0",
     "husky": "^4.0.3",
     "json-loader": "^0.5.7",
