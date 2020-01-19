@@ -4,7 +4,7 @@
   "description": "Server Template GCP Nodejs",
   "scripts": {
     "test": "npm run unit-test",
-    "integration-test": "mocha -r ts-node/register tests/Integration/**/*.spec.ts",
+    "integration-test": "mocha -r ts-node/register tests/Integration/**/*.spec.ts --timeout=10000",
     "unit-test": "mocha -r ts-node/register tests/Unit/**/*.spec.ts"
   },
   "author": "carneyc",
