@@ -23,6 +23,7 @@ pipelines:
           - node
         script:
           - npm install
+          - npm audit fix
           - npm test
     - step:
         <<: *deploy
