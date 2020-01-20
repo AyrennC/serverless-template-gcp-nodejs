@@ -26,6 +26,12 @@ pipelines:
           - npm audit fix
           - npm test
     - step:
+        name: Integration Test
+        caches:
+          - node
+        script:
+          - npm run integration-test
+    - step:
         <<: *deploy
     - step:
         <<: *deploy
