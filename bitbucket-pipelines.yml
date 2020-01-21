@@ -8,6 +8,7 @@ definitions:
           - node
         deployment: test
         script:
+          - npm install
           - pipe: atlassian/serverless-deploy:0.1.2
             variables:
               GCP_KEY_FILE: $GCP_KEY_FILE
@@ -30,6 +31,7 @@ pipelines:
         caches:
           - node
         script:
+          - npm install
           - npm run integration-test
     - step:
         <<: *deploy
