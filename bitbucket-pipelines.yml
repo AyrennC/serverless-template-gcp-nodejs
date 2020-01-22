@@ -1,6 +1,9 @@
 image: node:10.15.3
 
 definitions:
+  services:
+    firestore-emulator:
+      image: carneyc/gcloud-firestore-emulator
   steps:
     - step: &deploy
         name: Deploy to Test
@@ -33,6 +36,8 @@ pipelines:
         script:
           - npm install
           - npm run integration-test
+        services:
+          - firestore-emulator
     - step:
         <<: *deploy
     - step:
