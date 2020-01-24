@@ -22,13 +22,13 @@ definitions:
 pipelines:
   default:
     - step:
-        name: Build and test
+        name: Build and Unit-Test
         caches:
           - node
         script:
           - npm install
           - npm audit fix
-          - npm test
+          - npm run unit-test
     - step:
         name: Integration Test
         caches:

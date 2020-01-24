@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Server Template GCP Nodejs",
   "scripts": {
-    "test": "npm run unit-test",
+    "test": "npm run unit-test && npm run integration-test",
     "integration-test": "mocha -r ts-node/register tests/Integration/**/*.spec.ts --timeout=10000",
     "unit-test": "mocha -r ts-node/register tests/Unit/**/*.spec.ts"
   },
