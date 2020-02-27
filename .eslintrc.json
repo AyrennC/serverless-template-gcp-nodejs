@@ -29,7 +29,8 @@
           "order": "asc",
           "caseInsensitive": true
         },
-        "newlines-between": "never"
+        "newlines-between": "never",
+        "groups": ["index", "sibling", "parent", "external", "builtin"]
       }
     ],
     "no-use-before-define": "off",
