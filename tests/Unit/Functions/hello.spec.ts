@@ -1,7 +1,7 @@
+import { hello } from '../../../src/Functions/hello';
 import chai from 'chai';
 import chaiString from 'chai-string';
 import fc from 'fast-check';
-import { hello } from '../../../src/Functions/hello';
 
 chai.use(chaiString);
 const { expect } = chai;

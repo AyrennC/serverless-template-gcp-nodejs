@@ -1,5 +1,5 @@
-import { Request, RequestHandler, Response } from 'express';
 import { hello } from '../Functions/hello';
+import { Request, RequestHandler, Response } from 'express';
 
 export type HelloHandler = () => RequestHandler;
 
