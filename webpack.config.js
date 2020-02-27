@@ -2,7 +2,6 @@ const path = require('path');
 const slsw = require('serverless-webpack');
 const nodeExternals = require('webpack-node-externals');
 const CopyPlugin = require('copy-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   mode: slsw.lib.webpack.isLocal ? 'development' : 'production',
@@ -18,9 +17,7 @@ module.exports = {
     path: path.join(__dirname, '.webpack'),
     filename: '[name].js',
   },
-  plugins: [
-    new CopyPlugin(['package.json'])
-  ],
+  plugins: [new CopyPlugin(['package.json'])],
   target: 'node',
   module: {
     rules: [
@@ -34,18 +31,12 @@ module.exports = {
         test: /\.ts$/,
         exclude: /node_modules/,
         loader: 'ts-loader',
-        options: {
-          transpileOnly: true
-        },
       },
       {
         test: /\.json$/,
         loader: 'json-loader',
-      }
+      },
     ],
   },
-  externals: [
-    nodeExternals(),
-    new ForkTsCheckerWebpackPlugin()
-  ]
+  externals: [nodeExternals()],
 };

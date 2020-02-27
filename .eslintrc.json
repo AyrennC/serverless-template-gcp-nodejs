@@ -1,21 +1,38 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "mocha",
-    "security"
-  ],
-  "extends":  [
+  "plugins": ["mocha", "import", "security"],
+  "extends": [
     "plugin:@typescript-eslint/recommended",
     "plugin:mocha/recommended",
     "plugin:security/recommended",
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
-  "parserOptions":   {
+  "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "rules": {
-    "@typescript-eslint/camelcase":  ["error", { "properties": "never" }]
+    "import/no-dynamic-require": "error",
+    "import/no-cycle": "error",
+    "import/no-self-import": "error",
+    "import/no-useless-path-segments": "error",
+    "import/export": "error",
+    "import/no-named-as-default": "error",
+    "import/no-named-as-default-member": "error",
+    "import/first": "error",
+    "import/no-duplicates": "error",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "never"
+      }
+    ],
+    "no-use-before-define": "off",
+    "@typescript-eslint/camelcase": ["error", { "properties": "never" }]
   }
 }
