@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
+    "strictNullChecks": true,
     "lib": [
       "es2017",
       "es6",
-      "dom"
+      "es5"
     ],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
@@ -11,8 +12,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "sourceMap": true,
-    "target": "es2017",
-    "outDir": "lib",
+    "target": "es5",
+    "outDir": ".build",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "typeRoots": [

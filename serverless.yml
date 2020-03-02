@@ -1,5 +1,9 @@
 service: serverless-template-gcp-nodejs
 
+package:
+  exclude:
+    - node_modules/**
+
 provider:
   name: google
   stage: ${env:SLS_STAGE}
@@ -10,7 +14,7 @@ provider:
   credentials: keyfile.json
 
 plugins:
-  - serverless-webpack
+  - serverless-plugin-typescript
   - serverless-google-cloudfunctions
 
 functions:
@@ -19,6 +23,3 @@ functions:
     events:
       - http: http
 
-custom:
-  webpack:
-    includeModules: false
