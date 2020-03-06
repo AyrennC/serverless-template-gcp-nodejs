@@ -18,8 +18,17 @@ plugins:
   - serverless-google-cloudfunctions
 
 functions:
-  hello_world:
-    handler: hello_world
+  hello_world_http:
+    handler: hello_world_http
     events:
       - http: http
+  hello_world_pubsup:
+    handler: hello_world_pubsup
+    timeout: 300s
+    environment:
+      STORAGE_BUCKET: hello_world_bucket
+    events:
+      - event:
+          eventType: google.storage.object.finalize
+          resource: 'projects/${self:provider.project, ""}/buckets/hello_world'
 
