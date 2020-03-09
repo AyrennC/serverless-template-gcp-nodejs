@@ -7,7 +7,7 @@
     "test": "npm run unit-test && npm run integration-test",
     "integration-test": "mocha -r ts-node/register \"tests/Integration/**/*.spec.ts\"",
     "unit-test": "mocha -r ts-node/register \"tests/Unit/**/*.spec.ts\"",
-    "format": "eslint --fix src/**.ts tests/**/*.ts"
+    "format": "eslint --fix \"src/**.ts\" \"tests/**/*.ts\""
   },
   "author": "carneyc",
   "dependencies": {
