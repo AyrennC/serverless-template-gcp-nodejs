@@ -43,7 +43,7 @@
     "lint-staged": "^10.1.3",
     "mocha": "^7.1.1",
     "prettier": "^2.0.4",
-    "serverless-google-cloudfunctions": "^3.0.0",
+    "serverless-google-cloudfunctions": "^2.3.3",
     "serverless-plugin-typescript": "^1.1.9",
     "sinon": "^9.0.2",
     "sinon-chai": "^3.5.0",
