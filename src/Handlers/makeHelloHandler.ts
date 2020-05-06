@@ -1,4 +1,4 @@
-import { hello } from '../Functions/hello';
+import { hello } from '../Functions/Hello';
 import { Request, RequestHandler, Response } from 'express';
 
 export type HelloHandler = () => RequestHandler;
