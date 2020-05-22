@@ -33,7 +33,6 @@
         "groups": ["index", "sibling", "parent", "external", "builtin"]
       }
     ],
-    "no-use-before-define": "off",
-    "@typescript-eslint/camelcase": ["error", { "properties": "never" }]
+    "no-use-before-define": "off"
   }
 }
